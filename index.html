@@ -1,10 +1,10 @@
-
-
-
-    
-    
-    Guía Práctica - Razonamiento Clínico en 9 pasos
-    
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Práctica - Razonamiento Clínico en 9 pasos</title>
+    <style>
         body {
             margin: 0;
             padding: 0;
@@ -115,8 +115,8 @@
             background-color: #282828;
             border-radius: 4px;
         }
-    
-    
+    </style>
+    <script>
         function initializeCollapsibles() {
             var coll = document.getElementsByClassName("collapsible");
             for (var i = 0; i < coll.length; i++) {
@@ -126,41 +126,40 @@
             }
         }
 
-<pre><code>    function toggleCollapsible() {
-        this.classList.toggle(&quot;active&quot;);
-        var content = this.nextElementSibling;
-        if (content.style.display === &quot;block&quot;) {
-            content.style.display = &quot;none&quot;;
-        } else {
-            content.style.display = &quot;block&quot;;
-        }
-    }
-
-    function showSection(id) {
-        var sections = document.querySelectorAll(&#39;.section&#39;);
-        sections.forEach(function(section) {
-            section.classList.remove(&#39;active&#39;);
-        });
-        document.getElementById(id).classList.add(&#39;active&#39;);
-
-        var lis = document.querySelectorAll(&#39;#sidebar li&#39;);
-        lis.forEach(function(li) {
-            li.classList.remove(&#39;active&#39;);
-            if (li.getAttribute(&#39;onclick&#39;) === `showSection(&#39;${id}&#39;)`) {
-                li.classList.add(&#39;active&#39;);
+        function toggleCollapsible() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
             }
-        });
+        }
 
-        // Reinitialize collapsible event listeners for the active section
-        initializeCollapsibles();
-    }
+        function showSection(id) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
 
-    window.onload = function() {
-        showSection(&#39;intro&#39;);
-        initializeCollapsibles();
-    };
-&lt;/script&gt;
-</code></pre>
+            var lis = document.querySelectorAll('#sidebar li');
+            lis.forEach(function(li) {
+                li.classList.remove('active');
+                if (li.getAttribute('onclick') === `showSection('${id}')`) {
+                    li.classList.add('active');
+                }
+            });
+
+            // Reinitialize collapsible event listeners for the active section
+            initializeCollapsibles();
+        }
+
+        window.onload = function() {
+            showSection('intro');
+            initializeCollapsibles();
+        };
+    </script>
 </head>
 <body>
     <div id="top-bar">Guía Práctica - Razonamiento Clínico en 9 pasos</div>
