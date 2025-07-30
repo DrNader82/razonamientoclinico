@@ -68,10 +68,26 @@
         document.addEventListener('DOMContentLoaded', function () {
             const steps = [
                 {
-                    title: "Paso 1: Identificar Problema y Causas",
+                    title: "Paso 1: Estabilidad y Problema Principal",
                     content: `
-                        <h3 class="text-3xl font-bold text-teal-400 mb-4">Identificar el Problema Principal y Generar Causas Iniciales</h3>
-                        <p class="text-lg text-gray-400 mb-6">El primer paso es definir con claridad el punto de partida.</p>
+                        <h3 class="text-3xl font-bold text-teal-400 mb-4">Paso 1: Identificar Estabilidad, Problema Principal y Causas Iniciales</h3>
+                        
+                        <div class="bg-indigo-900 bg-opacity-50 border-l-4 border-indigo-400 p-5 rounded-lg mb-8 shadow-lg">
+                            <h4 class="text-xl font-bold text-indigo-200 mb-3">Punto Crítico: ¡Primero la Estabilidad! (Valoración ABCDE)</h4>
+                            <p class="text-indigo-200 mb-4">
+                                Antes de cualquier análisis diagnóstico detallado, la primera pregunta es: <strong>¿Mi paciente está estable o potencialmente inestable?</strong> Si hay signos de inestabilidad, se debe detener el proceso y activar la valoración primaria:
+                            </p>
+                            <ul class="list-none space-y-3 text-indigo-200">
+                                <li class="flex items-start"><span class="font-bold text-white bg-indigo-500 rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">A</span><div><strong>Airway (Vía Aérea):</strong> ¿Está la vía aérea permeable y protegida? ¿Hay ruidos que sugieran obstrucción (estridor, ronquidos)?</div></li>
+                                <li class="flex items-start"><span class="font-bold text-white bg-indigo-500 rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">B</span><div><strong>Breathing (Buena Ventilación):</strong> Evaluar la frecuencia respiratoria, el esfuerzo, la simetría del tórax y la saturación de oxígeno. ¿Usa músculos accesorios?</div></li>
+                                <li class="flex items-start"><span class="font-bold text-white bg-indigo-500 rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">C</span><div><strong>Circulation (Circulación):</strong> Medir la frecuencia cardíaca y la presión arterial. Evaluar el llenado capilar, la temperatura y color de la piel. ¿Hay hemorragia evidente?</div></li>
+                                <li class="flex items-start"><span class="font-bold text-white bg-indigo-500 rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">D</span><div><strong>Disability (Déficit Neurológico):</strong> Evaluar el estado de alerta usando la escala AVDI (Alerta, Verbal, Dolor, Inconsciente) o Glasgow. Revisar las pupilas.</div></li>
+                                <li class="flex items-start"><span class="font-bold text-white bg-indigo-500 rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">E</span><div><strong>Exposure (Exposición):</strong> Desvestir al paciente para buscar lesiones, exantemas o signos de trauma, previniendo siempre la hipotermia.</div></li>
+                            </ul>
+                            <p class="text-indigo-200 mt-4 font-semibold">La estabilización del paciente es la prioridad absoluta. Solo después se procede con el resto del análisis.</p>
+                        </div>
+
+                        <p class="text-lg text-gray-400 mb-6">Una vez asegurada la estabilidad, se procede a definir con claridad el punto de partida del diagnóstico.</p>
                         
                         <div class="space-y-6">
                             <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
@@ -95,15 +111,6 @@
                                     <li><strong class="text-white">FRE</strong>cuencia: ¿Qué tan seguido ocurre?</li>
                                     <li><strong class="text-white">DU</strong>ración: ¿Cuánto tiempo dura cada episodio?</li>
                                     <li><strong class="text-white">S</strong>íntomas <strong class="text-white">A</strong>sociados: ¿Qué otros síntomas lo acompañan?</li>
-                                </ul>
-                            </div>
-
-                            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                                <h4 class="text-xl font-semibold text-white mb-3">Enumerar y Organizar las Posibles Causas</h4>
-                                <p class="mb-4">Con el motivo de consulta ya caracterizado, realice una lluvia de ideas de todas las posibles causas. Organice esta lista para estructurar su pensamiento. La organización dependerá del problema:</p>
-                                <ul class="list-disc list-inside space-y-2 text-gray-300">
-                                    <li><strong class="text-teal-400">Anatómica (la más útil para dolores):</strong> Para un dolor torácico, las causas pueden ser de la pared torácica, pulmonares, cardíacas, esofágicas, etc.</li>
-                                    <li><strong class="text-teal-400">Fisiopatológica:</strong> Para la disnea, las causas pueden ser falla de bomba, obstrucción, problema del parénquima, etc.</li>
                                 </ul>
                             </div>
                         </div>
